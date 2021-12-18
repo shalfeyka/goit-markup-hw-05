@@ -42,7 +42,7 @@
         <section class="main-section overlay">
             <div class="container ">
        <h1 class="title-main">Эффективные решения для вашего бизнеса</h1>
-       <button class="button" type="button">Заказать услугу</button>
+       <button data-modal-open class="button" type="button">Заказать услугу</button>
     </div>
         </section>
          <section class="section">
@@ -92,9 +92,15 @@
             <div class="container">
         <h2 class="work-title">Чем мы занимаемся</h2>
             <ul class="work-list">
-       <li  class="work-list-item"> <img  src="./images/img.jpg" alt="картинка1" width="370"></li>
-       <li  class="work-list-item"> <img src="./images/img (1).jpg" alt="картинка2" width="370"></li>
-       <li  class="work-list-item"> <img src="./images/img (2).jpg" alt="картинка3" width="370"></li> 
+       <li  class="work-list-item"> <img  src="./images/img.jpg" alt="картинка1" width="370">
+            <p class="work-text-color">десктопные приложения</p>
+       </li>
+       <li  class="work-list-item"> <img src="./images/img (1).jpg" alt="картинка2" width="370">
+        <p class="work-text-color">мобильные приложения</p>
+    </li>
+       <li  class="work-list-item"> <img src="./images/img (2).jpg" alt="картинка3" width="370">
+        <p class="work-text-color">дизайнерские решения</p>
+    </li> 
             </ul>
         </div>
         </section>
@@ -396,7 +402,14 @@
    </div>
 </div>
 </footer>
-</main>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <p>
+            Modalka
+        </p>
+        <button data-modal-close>Закрыть</button>
+    </div>
 </div>
+<script src="./js/modal.js"></script>
 </body>
 </html>

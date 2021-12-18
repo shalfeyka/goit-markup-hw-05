@@ -8,6 +8,7 @@
     --color-text-header: #757575;
     --backround-color-clients: #E5E5E5;
     --logo-clients: #AFB1B8;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -75,11 +76,26 @@ p {
     list-style-type: none;
     text-decoration: none;
     display: flex;
+    position: relative;
  }
  
  .nav-items-list {
      margin-right: 50px;
  }
+ .nav-items-list .current::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--hover-collor-text);
+    border-radius: 2px;
+    bottom: -1px;
+}
+/*.nav-items-list:hover:after{*/ 
+    opacity: 1;
+}
+
  .nav-items-link {
      display: block;
      padding-top: 32px;
@@ -275,6 +291,7 @@ p {
 .work-list {
     list-style-type: none;
     display: flex;
+    position: relative;
 }
 .work-section {
     padding-top: 0;
@@ -294,6 +311,24 @@ p {
 .work-list-item:last-child {
     margin-right: 0;
 }
+.work-text-color {
+    text-transform: uppercase;
+    color: var(--title-color);
+    text-align: center;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    background-color: rgba(47, 48, 58, 0.8);
+    display: flex;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 370px;
+}
+
 
 img {
     display: block;
@@ -489,9 +524,28 @@ img {
     background-color: var(--hover-collor-text);
     
 }
-.social-links-icon-footer {
-
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.modal {
+    width: 528px;
+    height: 581px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /*portfolio*/
 
 /*Main information*/
@@ -554,6 +608,23 @@ a {
 }
 .link-block {
     display: block;
+}
+.project-thumb {
+    position: relative;
+}
+.project-text {
+    position: absolute;
+    transition: opacity 250ms var(--timing-function);
+    background: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+}
+.project-text:hover {
+    opacity: 1;
 }
 .link-block:hover,
 .link-block:focus {
