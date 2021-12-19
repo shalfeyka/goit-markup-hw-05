@@ -616,6 +616,7 @@ a {
     flex-wrap: wrap;
     margin-right: -30px;
     margin-bottom: -30px;
+   
 }
 .gallery-container{
     padding: 20px 24px; 
@@ -632,7 +633,8 @@ a {
 }
 .project-text {
     position: absolute;
-    transition: opacity 250ms var(--timing-function);
+    transition: opacity 250ms var(--timing-function), 
+    transform 250ms var(--timing-function);
     background: rgba(33, 150, 243, 0.9);
     opacity: 0;
     letter-spacing: 0.03em;
