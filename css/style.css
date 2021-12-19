@@ -628,6 +628,7 @@ a {
 }
 .project-thumb {
     position: relative;
+    
 }
 .project-text {
     position: absolute;
@@ -639,9 +640,13 @@ a {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
+    transform: translateY(-100%);
 }
 .project-text:hover {
     opacity: 1;
+}
+.project-thumb:hover {
+    transform: translateY(0);
 }
 .link-block:hover,
 .link-block:focus {
