@@ -477,6 +477,7 @@ img {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    transition: color 250ms var(--timing-function);
 }
 .location:hover {
     color: var(--hover-collor-text);
@@ -487,6 +488,7 @@ img {
     font-size: 14px;
     line-height: 1.71;
     text-decoration: none;
+    transition: color 250ms var(--timing-function);
 }
 .contacts-footer-list {
     margin-bottom: 60px;
@@ -545,7 +547,6 @@ img {
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
-   
 }
 .modal {
     width: 528px;
@@ -555,6 +556,9 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition-timing-function: var(--timing-function);
+    transition-property: transform;
+    transition-duration: 250ms;
 }
 .button-close {
     position: absolute;
@@ -567,10 +571,15 @@ img {
     box-sizing: border-box;
     top: 8px;
     right: 8px;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 0;
 }
-.icon-close {
-    background-color: #000000;
+.button-close:hover,
+.button-close:focus {
+    
 }
+
 
 /*portfolio*/
 
@@ -655,7 +664,7 @@ a {
     font-size: 18px;
     line-height: 1.55;
     transform: translateY(100%);
-    padding: 63px 20px;
+    padding: 63px 24px;
 }
 .project-text:hover {
     opacity: 1;
